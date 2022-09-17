@@ -5,9 +5,13 @@
     <classes>
       <class name="TestCases.SimpliLearnLogin">
         <methods>
+          <include name="DataSetup"/>
           <include name="SetUp"/>
+          <include name="Test3"/>
           <include name="Test1"/>
+          <include name="Test2"/>
           <include name="TearDown"/>
+          <include name="DataClean"/>
         </methods>
       </class> <!-- TestCases.SimpliLearnLogin -->
     </classes>
