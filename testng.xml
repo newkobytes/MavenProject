@@ -9,7 +9,7 @@
       
     <classes>
       <class name="TestCases.SimpliLearnLogin"/>
-      <class name="TestCases.HomeTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

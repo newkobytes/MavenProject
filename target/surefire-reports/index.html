@@ -109,12 +109,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.HomeTest" hash-for-method="Test1">Test1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.SimpliLearnLogin" hash-for-method="Test2(abc@xyz.com, Abc@1234)">Test2(abc@xyz.com, Abc@1234)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.SimpliLearnLogin" hash-for-method="Test2">Test2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestCases.SimpliLearnLogin" hash-for-method="Test3">Test3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -132,21 +132,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCases.HomeTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Test1">
-                  </a> <!-- Test1 -->
-                  <span class="method-name">Test1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">TestCases.SimpliLearnLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -159,9 +144,17 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="Test2">
-                  </a> <!-- Test2 -->
+                  <a name="Test2(abc@xyz.com, Abc@1234)">
+                  </a> <!-- Test2(abc@xyz.com, Abc@1234) -->
                   <span class="method-name">Test2</span>
+                  <span class="parameters">(abc@xyz.com, Abc@1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test3">
+                  </a> <!-- Test3 -->
+                  <span class="method-name">Test3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,9 +170,10 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;uname&quot; value=&quot;abc@xyz.com&quot;/&gt;
+    &lt;parameter name=&quot;pwd&quot; value=&quot;Abc@1234&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.SimpliLearnLogin&quot;/&gt;
-      &lt;class name=&quot;TestCases.HomeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -193,7 +187,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,22 +215,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test2')
+data.setCell(0, 1, 'Test1')
 data.setCell(0, 2, 'TestCases.SimpliLearnLogin')
-data.setCell(0, 3, 9896);
+data.setCell(0, 3, 9129);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Test1')
+data.setCell(1, 1, 'Test2')
 data.setCell(1, 2, 'TestCases.SimpliLearnLogin')
-data.setCell(1, 3, 8767);
+data.setCell(1, 3, 6016);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Test1')
-data.setCell(2, 2, 'TestCases.HomeTest')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'Test3')
+data.setCell(2, 2, 'TestCases.SimpliLearnLogin')
+data.setCell(2, 3, 5041);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -263,45 +257,50 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.SimpliLearnLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
+              <div class="configuration-test before">
+                <span class="method-name">DataSetup</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">SetUp(public void TestCases.SimpliLearnLogin.Test1())</span>
+                <span class="method-start">582 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Test1</span>
-                <span class="method-start">3122 ms</span>
+                <span class="method-start">3727 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">11891 ms</span>
+                <span class="method-start">12857 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
-                <span class="method-start">14329 ms</span>
+                <span class="method-name">SetUp(public void TestCases.SimpliLearnLogin.Test2(java.lang.String,java.lang.String))</span>
+                <span class="method-start">15296 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Test2</span>
-                <span class="method-start">16688 ms</span>
+                <span class="method-name">Test2(abc@xyz.com, Abc@1234)</span>
+                <span class="method-start">18023 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">26584 ms</span>
+                <span class="method-start">24039 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
-                <span class="method-start">29004 ms</span>
+                <span class="method-name">SetUp(public void TestCases.SimpliLearnLogin.Test3())</span>
+                <span class="method-start">26486 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Test1</span>
-                <span class="method-start">31252 ms</span>
+                <span class="method-name">Test3</span>
+                <span class="method-start">28929 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">31253 ms</span>
+                <span class="method-start">33971 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">DataClean</span>
+                <span class="method-start">36377 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
